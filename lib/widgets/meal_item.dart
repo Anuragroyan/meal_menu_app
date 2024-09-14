@@ -69,7 +69,7 @@ class MealItem extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    const SizedBox(height: 12),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -84,7 +84,7 @@ class MealItem extends StatelessWidget {
                         ),
                         const SizedBox(width: 12),
                         MealItemTrait(
-                          icon: Icons.attach_money,
+                          icon: Icons.wallet,
                           label: affordabilityText,
                         ),
                       ],
