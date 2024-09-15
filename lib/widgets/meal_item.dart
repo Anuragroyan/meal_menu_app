@@ -38,15 +38,12 @@ class MealItem extends StatelessWidget {
         },
         child: Stack(
           children: [
-            Hero(
-              tag: meal.id,
-              child: FadeInImage(
-                placeholder: MemoryImage(kTransparentImage),
-                image: NetworkImage(meal.imageUrl),
-                fit: BoxFit.cover,
-                height: 200,
-                width: double.infinity,
-              ),
+            FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: NetworkImage(meal.imageUrl),
+              fit: BoxFit.cover,
+              height: 200,
+              width: double.infinity,
             ),
             Positioned(
               bottom: 0,
@@ -54,10 +51,8 @@ class MealItem extends StatelessWidget {
               right: 0,
               child: Container(
                 color: Colors.black54,
-                padding: const EdgeInsets.symmetric(
-                  vertical: 6,
-                  horizontal: 44,
-                ),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
                 child: Column(
                   children: [
                     Text(
@@ -65,7 +60,7 @@ class MealItem extends StatelessWidget {
                       maxLines: 2,
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      overflow: TextOverflow.ellipsis,
+                      overflow: TextOverflow.ellipsis, // Very long text ...
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -82,20 +77,20 @@ class MealItem extends StatelessWidget {
                         ),
                         const SizedBox(width: 12),
                         MealItemTrait(
-                          icon: Icons.security,
+                          icon: Icons.work,
                           label: complexityText,
                         ),
                         const SizedBox(width: 12),
                         MealItemTrait(
-                          icon: Icons.wallet,
+                          icon: Icons.attach_money,
                           label: affordabilityText,
-                        ),
+                        )
                       ],
                     ),
                   ],
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),
